@@ -11,7 +11,7 @@ const users = [
     image: 'https://loremflickr.com/cache/resized/5682_30223694233_c5521d1ce5_h_640_480_nofilter.jpg',
   },
   {
-    image: 'https://loremflickr.com/cache/resized/2034_1640846294_dd333858d1_c_640_480_nofilter.jpg',
+    image: 'https://loremflickr.com/cache/resized/8334_8104123800_2d5308eed3_b_640_480_nofilter.jpg',
   },
   {
     image: 'https://loremflickr.com/cache/resized/65535_52332482231_61930e754d_z_640_480_nofilter.jpg',
@@ -33,4 +33,4 @@ function Content() {
   )
 }
 
-export default Content
+export default Content;
