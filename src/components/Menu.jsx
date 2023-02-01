@@ -1,28 +1,46 @@
 import React from 'react';
+import {
+  BsHouseDoorFill,
+  BsSearch,
+  BsCompass,
+  BsCaretRightSquare,
+  BsMessenger,
+  BsSuitHeart,
+  BsFillPlusSquareFill,
+  BsFillFilePersonFill,
+} from "react-icons/bs";
 
 const MenuItems = [
   {
+    component: BsHouseDoorFill,
     text: 'Home',
   },
   {
+    component: BsSearch,
     text: 'Search',
   },
   {
+    component: BsCompass,
     text: 'Explore',
   },
   {
+    component: BsCaretRightSquare,
     text: 'Reels',
   },
   {
+    component: BsMessenger,
     text: 'Messages',
   },
   {
+    component: BsSuitHeart,
     text: 'Notifications',
   },
   {
+    component: BsFillPlusSquareFill,
     text: 'Create',
   },
   {
+    component: BsFillFilePersonFill,
     text: 'Profile',
   },
 ];
@@ -30,11 +48,12 @@ const MenuItems = [
 function Menu() {
   return (
     <div className='flex flex-col w-full max-w-[245px] bg-black text-white h-100%'>
-        <h1 className='px-4 py-6 text-lg font-bold'>Instagram</h1>
+        <h1 className='px-4 py-6 text-lg font-serif font-bold italic'>Instagram</h1>
         <ul className='flex flex-col gap-2'>
-            {MenuItems.map(item => (
-              <li className='px-4 py-2 text-white hover:bg-zinc-800'>
-                <span>{item.text}</span>
+            {MenuItems.map((item, index) => (
+              <li key={index} className='flex flex-row px-4 py-2 gap-4 items-center text-white hover:bg-zinc-800 rounded-full'>
+                <item.component />
+                {item.text}
               </li>
             ))}
         </ul>
