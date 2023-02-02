@@ -47,9 +47,9 @@ const MenuItems = [
 
 function Menu() {
   return (
-    <div className='flex flex-col w-full max-w-[245px] bg-black text-white h-100%'>
-        <h1 className='px-4 py-6 text-lg font-serif font-bold italic'>Instagram</h1>
-        <ul className='flex flex-col gap-2'>
+    <div className='flex flex-col w-full max-w-[245px] bg-black text-white h-100% border-r border-white'>
+        <h1 className='px-4 py-6 text-lg font-serif font-bold italic fixed'>Instagram</h1>
+        <ul className='flex flex-col w-60 gap-2 fixed mt-20 '>
             {MenuItems.map((item, index) => (
               <li key={index} className='flex flex-row px-4 py-2 gap-4 items-center text-white hover:bg-zinc-800 rounded-full'>
                 <item.component />
