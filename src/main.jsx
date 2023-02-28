@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/App';
 import ErrorPage from './components/ErrorPage';
+import Profile from './routes/Profile';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -11,7 +12,13 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <ErrorPage />
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "profile/:profileId",
+        element: <Profile />,
+      },
+    ],
   },
 ]);
 
