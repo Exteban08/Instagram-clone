@@ -16,56 +16,64 @@ const MenuItems = [
     id: 1,
     component: BsHouseDoorFill,
     text: 'Home',
+    path: '/',
   },
   {
     id: 2,
     component: BsSearch,
     text: 'Search',
+    path: '/',
   },
   {
     id: 3,
     component: BsCompass,
     text: 'Explore',
+    path: '/',
   },
   {
     id: 4,
     component: BsCaretRightSquare,
     text: 'Reels',
+    path: '/',
   },
   {
     id: 5,
     component: BsMessenger,
     text: 'Messages',
+    path: '/',
   },
   {
     id: 6,
     component: BsSuitHeart,
     text: 'Notifications',
+    path: '/',
   },
   {
     id: 7,
     component: BsFillPlusSquareFill,
     text: 'Create',
+    path: '/',
   },
   {
     id: 8,
     component: BsFillFilePersonFill,
     text: 'Profile',
+    path: '/profile',
   },
 ];
 
 function Menu() {
   return (
     <div className='flex flex-col w-full max-w-[245px] bg-black text-white h-100% border-r border-white'>
-        <h1 className='px-4 py-6 text-lg font-serif font-bold italic fixed'>Instagram</h1>
-        <ul className='flex flex-col w-60 gap-2 fixed mt-20 '>
-            {MenuItems.map((item) => (
-              <li key={item.id} className='flex flex-row px-4 py-2 gap-4 items-center text-white hover:bg-zinc-800 rounded-full'>
-                <item.component />
-                <Link to={`profile/${item.id}`}>{item.text}</Link>
-              </li>
-            ))}
-        </ul>
+      <h1 className='px-4 py-6 text-lg font-serif font-bold italic fixed'>Instagram</h1>
+      <ul className='flex flex-col w-60 gap-2 fixed mt-20 '>
+          {MenuItems.map((item) => (
+            <li key={item.id} className='flex flex-row px-4 py-2 gap-4 items-center text-white hover:bg-zinc-800 rounded-full'>
+              <item.component />
+              <Link to={item.path}>{item.text}</Link>
+            </li>
+          ))}
+      </ul>
     </div>
   )
 }
