@@ -64,7 +64,7 @@ function Content() {
           </div>
         </div>
       </div>
-      <div id='detail'>
+      <div>
         <Outlet />
       </div>
     </>
