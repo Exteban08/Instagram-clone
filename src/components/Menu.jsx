@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   BsHouseDoorFill,
   BsSearch,
@@ -9,7 +10,6 @@ import {
   BsFillPlusSquareFill,
   BsFillFilePersonFill,
 } from "react-icons/bs";
-import { Link } from 'react-router-dom';
 
 const MenuItems = [
   {
@@ -64,9 +64,9 @@ const MenuItems = [
 
 function Menu() {
   return (
-    <div className='flex flex-col w-full max-w-[245px] bg-black text-white h-100% border-r border-white'>
+    <div className='flex flex-col h-screen w-full max-w-[245px] bg-black text-white border-r border-white fixed'>
       <h1 className='px-4 py-6 text-lg font-serif font-bold italic fixed'>Instagram</h1>
-      <ul className='flex flex-col w-60 gap-2 fixed mt-20 '>
+      <ul className='flex flex-col w-60 gap-2 fixed mt-20'>
           {MenuItems.map((item) => (
             <li key={item.id} className='flex flex-row px-4 py-2 gap-4 items-center text-white hover:bg-zinc-800 rounded-full'>
               <item.component />
