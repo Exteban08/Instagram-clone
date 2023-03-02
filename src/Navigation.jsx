@@ -1,13 +1,13 @@
 import React from 'react';
-import Profile from './Profile';
-import Content from './Content';
-import Menu from './Menu';
-import Search from './Search';
-import Explore from './Explore';
-import Reels from './Reels';
-import Messages from './Messages';
-import Notifications from './Notifications';
-import Create from './Create';
+import Profile from './components/Profile';
+import Content from './components/Content';
+import Menu from './components/Menu';
+import Search from './components/Search';
+import Explore from './components/Explore';
+import Reels from './components/Reels';
+import Messages from './components/Messages';
+import Notifications from './components/Notifications';
+import Create from './components/Create';
 
 function HomeNavigation() {
   return (
