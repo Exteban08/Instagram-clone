@@ -10,7 +10,7 @@ import {
   CreateNavigation,
   ProfileNavigation,
 } from './Navigation';
-import ErrorPage from './ErrorPage';
+import ErrorPage from './components/ErrorPage';
 import '../styles/App.css';
 
 function App() {
