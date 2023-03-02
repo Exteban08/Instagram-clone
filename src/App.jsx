@@ -10,8 +10,8 @@ import {
   CreateNavigation,
   ProfileNavigation,
 } from './Navigation';
-import ErrorPage from './ErrorPage';
-import '../styles/App.css';
+import ErrorPage from './components/ErrorPage';
+import './styles/App.css';
 
 function App() {
   return <Routes>
