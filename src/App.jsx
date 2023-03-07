@@ -10,12 +10,14 @@ import {
   CreateNavigation,
   ProfileNavigation,
 } from './Navigation';
+import Login from './Login';
 import ErrorPage from './components/ErrorPage';
 import './styles/App.css';
 
 function App() {
   return <Routes>
     <Route path='/' element={<HomeNavigation />} />
+    <Route path='/login' element={<Login />} />
     <Route path='/search' element={<SearchNavigation />} />
     <Route path='/explore' element={<ExploreNavigation />} />
     <Route path='/reels' element={<ReelsNavigation />} />
