@@ -57,7 +57,7 @@ function Login() {
         <div className='w-full text-xs text-gray-400'>
           <p>Need an Account?<br />
             <span className='line'>
-              <a href='#'>Sign-up</a>
+              <a href='#' className='hover:text-blue-300'>Sign-up</a>
             </span>
           </p>
         </div>

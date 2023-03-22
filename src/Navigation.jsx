@@ -8,6 +8,15 @@ import Reels from './components/Reels';
 import Messages from './components/Messages';
 import Notifications from './components/Notifications';
 import Create from './components/Create';
+import Login from './Login';
+
+function LoginNavigation() {
+  return (
+    <div className='flex h-full'>
+      <Login />
+    </div>
+  );
+};
 
 function HomeNavigation() {
   return (
@@ -82,6 +91,7 @@ function ProfileNavigation() {
 };
 
 export {
+  LoginNavigation,
   HomeNavigation,
   SearchNavigation,
   ExploreNavigation,
