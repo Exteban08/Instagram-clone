@@ -9,15 +9,17 @@ import {
   NotificationsNavigation,
   CreateNavigation,
   ProfileNavigation,
+  LoginNavigation,
+  SignUpNavigation,
 } from './Navigation';
-import Login from './Login';
 import ErrorPage from './components/ErrorPage';
 import './styles/App.css';
 
 function App() {
   return <Routes>
-    <Route path='/' element={<HomeNavigation />} />
-    <Route path='/login' element={<Login />} />
+    <Route path='/' element={<LoginNavigation />} />
+    <Route path='/sign-up' element={<SignUpNavigation />} />
+    <Route path='/home' element={<HomeNavigation />} />
     <Route path='/search' element={<SearchNavigation />} />
     <Route path='/explore' element={<ExploreNavigation />} />
     <Route path='/reels' element={<ReelsNavigation />} />
