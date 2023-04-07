@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const userRef = useRef();
   const errRef = useRef();
+  const navigate = useNavigate();
 
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
@@ -11,6 +13,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(user, password);
+    navigate('/home');
     setUser('');
     setPassword('');
   };
@@ -34,7 +37,7 @@ function Login() {
             className='border-2 border-gray-300 p-2 rounded-md focus:outline-none focus:border-blue-500 mb-4'
             type="text"
             id="username"
-            placeholder="Username"
+            placeholder="Email"
             ref={userRef}
             autoComplete="off"
             onChange={(e) => setUser(e.target.value)}
@@ -57,7 +60,7 @@ function Login() {
         <div className='w-full text-xs text-gray-400'>
           <p>Need an Account?<br />
             <span className='line'>
-              <a href='#' className='hover:text-blue-300'>Sign-up</a>
+              <a href='/sign-up' className='hover:text-blue-300'>Sign-up</a>
             </span>
           </p>
         </div>

@@ -16,7 +16,7 @@ const MenuItems = [
     id: 1,
     component: BsHouseDoorFill,
     text: 'Home',
-    path: '/',
+    path: '/home',
   },
   {
     id: 2,

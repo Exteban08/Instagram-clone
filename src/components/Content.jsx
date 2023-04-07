@@ -24,6 +24,21 @@ const users = [
   },
 ]
 
+const icons = [
+  {
+    icon: BsSuitHeart,
+  },
+  {
+    icon: BsChat,
+  },
+  {
+    icon: BsBoxArrowUpRight,
+  },
+  {
+    icon: BsBookmark,
+  }
+]
+
 function Content() {
   return (
     <div className='flex justify-center w-full h-screen bg-black p-10 ml-60'>
@@ -44,11 +59,16 @@ function Content() {
                 <p className='font-bold'>{user.name}</p>
               </div>
               <img className='w-[600px] mt-2 border border-white' src={user.image} />
+
               <div className='flex flex-row gap-4 text-white mt-3'>
-                <BsSuitHeart className='w-6 h-6'/>
-                <BsChat className='w-6 h-6'/>
-                <BsBoxArrowUpRight className='w-6 h-6'/>
-                <BsBookmark className='w-6 h-6 ml-auto'/>
+                {icons.map((icon, index) => 
+                  <div key={index}>
+                    {icon.icon === BsSuitHeart && <icon.icon className='w-6 h-6 hover:fill-red-500' />}
+                    {icon.icon === BsChat && <icon.icon className='w-6 h-6 hover:fill-blue-400' />}
+                    {icon.icon === BsBoxArrowUpRight && <icon.icon className='w-6 h-6 hover:fill-blue-400' />}
+                    {icon.icon === BsBookmark && <icon.icon className='w-6 h-6 ml-auto hover:fill-yellow-300' />}
+                  </div>
+                )}
               </div>
               <div className='flex flex-col'>
                 <p className='text-white font-bold text-sm mt-3'>3,000 likes</p>
